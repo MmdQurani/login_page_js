@@ -1,0 +1,26 @@
+/* todo Login section styles */
+#Login_page_in_left {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* todo text section styles */
+#text_page_in_right {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    align-items: start;
+}
+#box_text {
+    width: 60%;
+    height: 200px;
+    top: 30px;
+    background-color: transparent;
+}
+#text_of_web {
+    color: var(--colorText);
+    font-family: var(--fontFamily);
+    font-size: 42px;
+    text-shadow: 0 0 3px #1d204381;
+}
