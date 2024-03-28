@@ -51,6 +51,8 @@
     width: 90%;
     height: 45px;
     padding: 0 20px;
+    background-color: transparent;
+    color: var(--colorText);
     border: 1.5px solid #1d20434e;
     border-radius: 8px;
     font-size: 22px;
@@ -76,7 +78,7 @@
     text-decoration: none;
     color: var(--colorTextTwo);
 }
-#box_btn_buttom>input {
+#box_btn_buttom>#btn_save {
     width: 95%;
     height: 40%;
     background-color: var(--colorBtn);
