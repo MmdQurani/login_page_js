@@ -4,6 +4,90 @@
     height: 100%;
     background-color: transparent;
 }
+#box_Login {
+    width: 421px;
+    height: 500px;
+    background-color: var(--colorTextBtn);
+    border-radius: 12px;
+    box-shadow: 0 0 10px #1d204358 , 0 0 14px #1d204338;
+}
+#box_text_top {
+    width: 100%;
+    height: 30%;
+    background-color: transparent;
+    align-items: start;
+    gap: 15px;
+}
+#text_one {
+    font-family: var(--fontFamily);
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--colorText);
+    padding: 0 20px;
+}
+#text_two {
+    font-family: var(--fontFamily);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--colorTextTwo);
+    padding: 0 20px;
+}
+#box_input_center {
+    width: 93%;
+    height: 40%;
+    background-color: transparent;
+    align-items: start;
+    justify-content: start;
+    gap: 12px;
+}
+#box_input_center>span {
+    font-family: var(--fontFamily);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--colorTextTwo);
+    padding: 0 10px;
+}
+#box_input_center>input {
+    width: 90%;
+    height: 45px;
+    padding: 0 20px;
+    border: 1.5px solid #1d20434e;
+    border-radius: 8px;
+    font-size: 22px;
+    font-family: var(--fontFamily);
+}
+#box_btn_buttom {
+    width: 100%;
+    height: 30%;
+    background-color: transparent;
+    gap: 20px;
+}
+#box_link {
+    width: 92%;
+    height: 25%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+#box_link>a {
+    font-family: var(--fontFamily);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--colorTextTwo);
+}
+#box_btn_buttom>input {
+    width: 95%;
+    height: 40%;
+    background-color: var(--colorBtn);
+    font-size: 22px;
+    font-family: var(--fontFamily);
+    font-weight: 600;
+    color: var(--colorTextBtn);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
 
 /* todo text section styles */
 #text_page_in_right {
@@ -22,5 +106,6 @@
     color: var(--colorText);
     font-family: var(--fontFamily);
     font-size: 42px;
+    font-weight: 600;
     text-shadow: 0 0 3px #1d204381;
 }
