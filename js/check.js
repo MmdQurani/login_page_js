@@ -17,11 +17,11 @@ let saveUserPassword ;
 let checkData ;
 
 btnSave.addEventListener ("click" , () => {
-    saveUserName = userName.value;
-    saveUserPassword = userPassword.value;
+    saveUserName = userName.value.toLowerCase();
+    saveUserPassword = userPassword.value.toLowerCase();
 
     checkData = usersData.some ((user) => {
-        if (user.Name === saveUserName && user.Password === saveUserPassword) {
+        if (user.Name.toLowerCase() === saveUserName && user.Password.toLowerCase() === saveUserPassword) {
             userName.style.backgroundColor = "rgb(234, 255, 224)";
             userName.style.color = "rgb(95, 161, 66)";
             userPassword.style.backgroundColor = "rgb(234, 255, 224)";
