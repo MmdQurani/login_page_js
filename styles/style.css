@@ -111,3 +111,58 @@
     font-weight: 600;
     text-shadow: 0 0 3px #1d204381;
 }
+
+#mudal_box {
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    top: 100px;
+    right: 100px;
+    background-color: #e9e9e982;
+    backdrop-filter: blur(15px);
+    border: 2px solid #d00045;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #d00045;
+    display: none;
+    z-index: 1;
+}
+#mudal_box>span {
+    font-family: var(--Fontfamily);
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 0 0 4px #d00045,0 0 4px #fff ,0 0 4px #d00045,0 0 4px #fff;
+}
+.animationMUDAL {
+    animation: mudalanime 1s 1 forwards;
+}
+@keyframes mudalanime {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    60% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+}
+.animationMUDALend {
+    animation: mudalanimeEnd 1s 1 forwards;
+}
+@keyframes mudalanimeEnd {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    40% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
