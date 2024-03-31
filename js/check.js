@@ -8,9 +8,11 @@ let usersData = [
 
 console.log(usersData);
 
-let userName = document.getElementById ("user_name");
-let userPassword = document.getElementById ("user_password");
-let btnSave = document.getElementById ("btn_save");
+let $ = document;
+let userName = $.getElementById ("user_name");
+let userPassword = $.getElementById ("user_password");
+let btnSave = $.getElementById ("btn_save");
+let mudalBox = $.getElementById ("mudal_box");
 
 let saveUserName ;
 let saveUserPassword ;
@@ -22,6 +24,9 @@ btnSave.addEventListener ("click" , () => {
 
     checkData = usersData.some ((user) => {
         if (user.Name.toLowerCase() === saveUserName && user.Password.toLowerCase() === saveUserPassword) {
+            mudalBox.classList.remove ("animationMUDAL");
+            mudalBox.classList.add ("animationMUDALend");
+            mudalBox.style.display = "none";
             userName.style.backgroundColor = "rgb(234, 255, 224)";
             userName.style.color = "rgb(95, 161, 66)";
             userPassword.style.backgroundColor = "rgb(234, 255, 224)";
@@ -32,6 +37,9 @@ btnSave.addEventListener ("click" , () => {
             userName.style.color = "rgb(161, 66, 96)";
             userPassword.style.backgroundColor = "rgb(255, 224, 233)";
             userPassword.style.color = "rgb(161, 66, 96)";
+            mudalBox.classList.remove ("animationMUDALend");
+            mudalBox.style.display = "flex";
+            mudalBox.classList.add ("animationMUDAL");
         }
     });
 });
