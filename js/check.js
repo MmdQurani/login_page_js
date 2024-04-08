@@ -14,6 +14,8 @@ let userPassword = $.getElementById ("user_password");
 let btnSave = $.getElementById ("btn_save");
 let mudalBox = $.getElementById ("mudal_box");
 
+let togglePassword = $.querySelector (".toggle-password");
+
 let saveUserName ;
 let saveUserPassword ;
 let checkData ;
@@ -43,4 +45,14 @@ btnSave.addEventListener ("click" , (event) => {
             mudalBox.classList.add ("animationMUDAL");
         }
     });
+});
+
+togglePassword.addEventListener ("click" , () => {
+    if (userPassword.type === "text") {
+        togglePassword.classList.remove ("active");
+        userPassword.type = "password";
+    }else {
+        togglePassword.classList.add ("active");
+        userPassword.type = "text";
+    }
 });
