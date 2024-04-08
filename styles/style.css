@@ -40,14 +40,14 @@
     justify-content: start;
     gap: 12px;
 }
-#box_input_center>span {
+#box_input_center span {
     font-family: var(--fontFamily);
     font-size: 22px;
     font-weight: 500;
     color: var(--colorTextTwo);
     padding: 0 10px;
 }
-#box_input_center>input {
+#box_input_center input {
     width: 90%;
     height: 45px;
     padding: 0 20px;
@@ -57,6 +57,30 @@
     border-radius: 8px;
     font-size: 22px;
     font-family: var(--fontFamily);
+}
+#box_input_center>#box_input_password {
+    width: 100%;
+    height: max-content;
+    gap: 12px;
+    align-items: start;
+    justify-content: start;
+}
+.toggle-password {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+.toggle-password.active i.fa-eye {
+    display: none;
+}
+.toggle-password.active i.fa-eye-slash {
+    display: inline;
+}
+.toggle-password i.fa-eye-slash {
+    display: none;
 }
 #box_btn_buttom {
     width: 100%;

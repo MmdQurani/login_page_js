@@ -6,6 +6,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
     <div id="container" class="flex_row">
@@ -24,7 +25,13 @@
                     <span id="text_user_name">User Name</span>
                     <input type="text" name="" id="user_name">
                     <span id="text_user_password">User Password</span>
-                    <input type="text" name="" id="user_password">
+                    <div id="box_input_password" class="rel_position flex_row">
+                        <input type="password" name="" id="user_password">
+                        <div class="toggle-password">
+                            <i class="fa fa-eye"></i>
+                            <i class="fa fa-eye-slash"></i>
+                        </div>
+                    </div>
                 </div>
                 <div id="box_btn_buttom" class="rel_position flex_col">
                     <div id="box_link" class="rel_position">
