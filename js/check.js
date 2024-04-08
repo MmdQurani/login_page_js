@@ -18,7 +18,8 @@ let saveUserName ;
 let saveUserPassword ;
 let checkData ;
 
-btnSave.addEventListener ("click" , () => {
+btnSave.addEventListener ("click" , (event) => {
+    event.preventDefault();
     saveUserName = userName.value.toLowerCase();
     saveUserPassword = userPassword.value.toLowerCase();
 
