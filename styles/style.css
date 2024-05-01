@@ -43,7 +43,7 @@
 #box_Login {
     width: 421px;
     height: 500px;
-    background-color: var(--colorTextBtn);
+    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 0 10px #1d204358 , 0 0 14px #1d204338;
 }
