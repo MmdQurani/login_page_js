@@ -1,3 +1,17 @@
+#toggle-theme {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-family: var(--fontfamily);
+    z-index: 10;
+    cursor: pointer;
+}
+
 /* todo loader styles */
 #loader {
     position: absolute;
