@@ -10,9 +10,9 @@ let boxBtnButtom = document.querySelectorAll ("#box_link>a");
 let toggleTheme = document.getElementById("toggle-theme");
 let flagTheme = true;
 
-function darkMode () {
-    localStorage.setItem("theme" , "dark");
-    flagTheme = !flagTheme;
+function lightMode () {
+    localStorage.setItem("theme" , "light");
+    flagTheme = true;
 
     container.style.backgroundImage = "url(img/background.png)";
     textOfWeb.style.color = "var(--colorText)";
@@ -34,9 +34,9 @@ function darkMode () {
     });
 }
 
-function lightMode () {
-    localStorage.setItem("theme" , "light");
-    flagTheme = !flagTheme;
+function darkMode () {
+    localStorage.setItem("theme" , "dark");
+    flagTheme = false;
 
     container.style.backgroundImage = "url(img/background-2.png)";
     textOfWeb.style.color = "#fff";
@@ -59,15 +59,17 @@ function lightMode () {
 
 toggleTheme.addEventListener ("click" , () => {
     if (flagTheme) {
-        lightMode();
-    }else {
         darkMode();
+    }else {
+        lightMode();
     }
 });
 
 window.addEventListener ("load" , () => {
     let saveValueLS = localStorage.getItem("theme");
-    if (saveValueLS === "dark") {
+    if (saveValueLS == null) {
+        lightMode();
+    }else if (saveValueLS === "dark") {
         darkMode();
     }else {
         lightMode();
