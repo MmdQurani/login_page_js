@@ -10,44 +10,66 @@ let boxBtnButtom = document.querySelectorAll ("#box_link>a");
 let toggleTheme = document.getElementById("toggle-theme");
 let flagTheme = true;
 
+function darkMode () {
+    localStorage.setItem("theme" , "dark");
+    flagTheme = !flagTheme;
+
+    container.style.backgroundImage = "url(../img/background.png)";
+    textOfWeb.style.color = "var(--colorText)";
+    boxLogin.style.backgroundColor = "#fff";
+
+    boxTextTop.forEach ((item) => {
+        item.style.color = "var(--colorText)"
+    });
+
+    boxInputCenterSpan.forEach ((item) => {
+        item.style.color = "var(--colorTextTwo)"
+    });
+
+    boxInputPassword.style.border = "1.5px solid #1d20434e";
+    boxInputCenter.style.border = "1.5px solid #1d20434e";
+    
+    boxBtnButtom.forEach ((item) => {
+        item.style.color = "var(--colorTextTwo)";
+    });
+}
+
+function lightMode () {
+    localStorage.setItem("theme" , "light");
+    flagTheme = !flagTheme;
+
+    container.style.backgroundImage = "url(../img/background-2.png)";
+    textOfWeb.style.color = "#fff";
+    boxLogin.style.backgroundColor = "#2d31649a";
+
+    boxTextTop.forEach ((item) => {
+        item.style.color = "#fff"
+    });
+
+    boxInputCenterSpan.forEach ((item) => {
+        item.style.color = "#fff"
+    });
+    
+    boxInputPassword.style.border = "1.5px solid #fff";
+    boxInputCenter.style.border = "1.5px solid #fff";
+    boxBtnButtom.forEach ((item) => {
+        item.style.color = "#fff";
+    });
+}
+
 toggleTheme.addEventListener ("click" , () => {
     if (flagTheme) {
-        localStorage.setItem("theme" , "light");
-        flagTheme = !flagTheme;
-        container.style.backgroundImage = "url(../img/background-2.png)";
-        textOfWeb.style.color = "#fff";
-        boxLogin.style.backgroundColor = "#2d31649a";
-        boxTextTop.forEach ((item) => {
-            item.style.color = "#fff"
-        });
-        boxInputCenterSpan.forEach ((item) => {
-            item.style.color = "#fff"
-        });
-        boxInputPassword.style.border = "1.5px solid #fff";
-        boxInputCenter.style.border = "1.5px solid #fff";
-        boxBtnButtom.forEach ((item) => {
-            item.style.color = "#fff"
-        });
+        lightMode();
     }else {
-        localStorage.setItem("theme" , "dark");
-        flagTheme = !flagTheme;
+        darkMode();
+    }
+});
 
-        container.style.backgroundImage = "url(../img/background.png)";
-        textOfWeb.style.color = "var(--colorText)";
-        boxLogin.style.backgroundColor = "#fff";
-        boxTextTop.forEach ((item) => {
-            item.style.color = "var(--colorText)"
-        });
-
-        boxInputCenterSpan.forEach ((item) => {
-            item.style.color = "var(--colorTextTwo)"
-        });
-
-        boxInputPassword.style.border = "1.5px solid #1d20434e";
-        boxInputCenter.style.border = "1.5px solid #1d20434e";
-        
-        boxBtnButtom.forEach ((item) => {
-            item.style.color = "var(--colorTextTwo)"
-        });
+window.addEventListener ("load" , () => {
+    let saveValueLS = localStorage.getItem("theme");
+    if (saveValueLS === "dark") {
+        darkMode();
+    }else {
+        lightMode();
     }
 });
