@@ -14,7 +14,7 @@ function darkMode () {
     localStorage.setItem("theme" , "dark");
     flagTheme = !flagTheme;
 
-    container.style.backgroundImage = "url(../img/background.png)";
+    container.style.backgroundImage = "url(img/background.png)";
     textOfWeb.style.color = "var(--colorText)";
     boxLogin.style.backgroundColor = "#fff";
 
@@ -38,7 +38,7 @@ function lightMode () {
     localStorage.setItem("theme" , "light");
     flagTheme = !flagTheme;
 
-    container.style.backgroundImage = "url(../img/background-2.png)";
+    container.style.backgroundImage = "url(img/background-2.png)";
     textOfWeb.style.color = "#fff";
     boxLogin.style.backgroundColor = "#2d31649a";
 
