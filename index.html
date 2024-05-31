@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
 </head>
 <body>
     
@@ -16,9 +16,9 @@
     </div>
 
     <div id="container" class="flex_row" style="background-image: url(img/background.png)">
-        <div id="mudal_box" class="flex_center">
+        <!-- <div id="mudal_box" class="flex_center">
             <span id="text_undefined">Please enter the information correctly</span>
-        </div>
+        </div> -->
 
         <button id="toggle-theme">dark mode</button>
 
@@ -46,10 +46,27 @@
                         <a href="#">Forget Password</a>
                         <a href="#">Sign in</a>
                     </div>
-                    <input type="submit" id="btn_save" value="Login">
+                    <input type="submit" id="btn_save" value="Login" data-bs-toggle="modal" data-bs-target="#modal-box">
                 </div>
             </form>
 
+        </div>
+
+        <div id="modal-box" class="modal fade">
+            <div id="modal-dialog" class="modal-dialog">
+                <div id="modal-content" class="modal-content">
+
+                    <div id="modal-header" class="modal-header">
+                        <span id="title-modal" class="fs-3">hello world</span>
+                        <button id="btn-close" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div id="modal-body" class="modal-body">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, itaque.</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div id="text_page_in_right" class="rel_position flex_center">
