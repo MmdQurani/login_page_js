@@ -1,3 +1,9 @@
+<h1>About</h1>
+
+- <h4>A local login page</h4>
+
+<hr/>
+
 <h3>
-  <a href = "https://mmd-web.github.io/login_page_js">Initial view of the input project</a>
+  <a href = "https://mmd-web.github.io/Conversion_app">Sample project</a>
 </h3>
