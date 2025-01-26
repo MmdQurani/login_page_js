@@ -5,5 +5,5 @@
 <hr/>
 
 <h3>
-  <a href = "https://mmd-web.github.io/login_page_js/">Sample project</a>
+  <a href = "https://MmdQurani.github.io/login_page_js/">Sample project</a>
 </h3>
